@@ -11,6 +11,7 @@ let countT = 6;
 const taskCount = document.getElementById('task-count');
 taskCount.innerText = countT;
 
+
 const activityBox = document.getElementById('activity-box');
 
 function completed1() {
@@ -24,6 +25,9 @@ function completed1() {
     activLog.innerText = "You have completed the task " + document.getElementById('card1-title').innerText + " at " + tarik.getHours() + ":" + tarik.getMinutes() + ":" + tarik.getSeconds();
     activLog.classList.add("bg-indigo-50", "p-3", "rounded-xl", "mb-3");
     activityBox.appendChild(activLog);
+    if (countT === 0) {
+        alert('COngratulations for completing all current tasks');
+    }
 }
 function completed2() {
     alert('Board Successfully Updated');
@@ -36,6 +40,9 @@ function completed2() {
     activLog.innerText = "You have completed the task " + document.getElementById('card2-title').innerText + " at " + tarik.getHours() + ":" + tarik.getMinutes() + ":" + tarik.getSeconds();
     activLog.classList.add("bg-indigo-50", "p-3", "rounded-xl", "mb-3");
     activityBox.appendChild(activLog);
+    if (countT === 0) {
+        alert('COngratulations for completing all current tasks');
+    }
 }
 function completed3() {
     alert('Board Successfully Updated');
@@ -48,6 +55,9 @@ function completed3() {
     activLog.innerText = "You have completed the task " + document.getElementById('card3-title').innerText + " at " + tarik.getHours() + ":" + tarik.getMinutes() + ":" + tarik.getSeconds();
     activLog.classList.add("bg-indigo-50", "p-3", "rounded-xl", "mb-3");
     activityBox.appendChild(activLog);
+    if (countT === 0) {
+        alert('COngratulations for completing all current tasks');
+    }
 }
 function completed4() {
     alert('Board Successfully Updated');
@@ -60,6 +70,9 @@ function completed4() {
     activLog.innerText = "You have completed the task " + document.getElementById('card4-title').innerText + " at " + tarik.getHours() + ":" + tarik.getMinutes() + ":" + tarik.getSeconds();
     activLog.classList.add("bg-indigo-50", "p-3", "rounded-xl", "mb-3");
     activityBox.appendChild(activLog);
+    if (countT === 0) {
+        alert('COngratulations for completing all current tasks');
+    }
 }
 function completed5() {
     alert('Board Successfully Updated');
@@ -72,6 +85,10 @@ function completed5() {
     activLog.innerText = "You have completed the task " + document.getElementById('card5-title').innerText + " at " + tarik.getHours() + ":" + tarik.getMinutes() + ":" + tarik.getSeconds();
     activLog.classList.add("bg-indigo-50", "p-3", "rounded-xl", "mb-3");
     activityBox.appendChild(activLog);
+    if (countT === 0) {
+        alert('COngratulations for completing all current tasks');
+    }
+
 }
 function completed6() {
     alert('Board Successfully Updated');
@@ -84,6 +101,9 @@ function completed6() {
     activLog.innerText = "You have completed the task " + document.getElementById('card6-title').innerText + " at " + tarik.getHours() + ":" + tarik.getMinutes() + ":" + tarik.getSeconds();
     activLog.classList.add("bg-indigo-50", "p-3", "rounded-xl", "mb-3");
     activityBox.appendChild(activLog);
+    if (countT === 0) {
+        alert('COngratulations for completing all current tasks');
+    }
 }
 function clearHis() {
     const clearHist = document.getElementById("activity-box");
@@ -99,4 +119,5 @@ function colorChng() {
     }
     document.getElementById("body").setAttribute("style", `background-color:${bgColor}`);
 }
+
 
