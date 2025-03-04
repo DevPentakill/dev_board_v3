@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev-Board</title>
+    <title>Dev-Blogs</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -19,22 +19,13 @@
                 <a class="text-xl">Dev<span class="font-bold">Board</span></a>
             </div>
             <div class="flex-none">
-                <div class="flex bg-indigo-50 mr-5 p-3 rounded-3xl">
-                    <div><img src="./assets/checkbox.png" alt="checkbox here"></div>
-                    <p id="nav-count" class="font-bold ml-2"></p>
-                </div>
-                <div class="bg-indigo-50 p-3 rounded-full">
-                    <div class="w-8 rounded-full">
-                        <button onclick="colorChng()"><img alt="this is a theme button"
-                                src="./assets/theme-btn.png" /></button>
-                    </div>
-                </div>
+                 <a href="./index.html"><button class="btn btn-primary" >Back to Desk</button></a> 
             </div>
         </div>
     </section>
     <!-- Navigation Bar Ends here -->
 
-    <main class="container mx-auto mb-4 flex gap-5 justify-between">
+    <main class="container mx-auto mb-4">
 
         <!-- Discover Something New Today starts -->
         <section class="bg-white py-9 px-6 rounded-xl w-4/5">
@@ -70,14 +61,13 @@
                 </div> -->
 
                 <div class="flex items-center bg-gradient-to-r from-blue-600 to-blue-50 mb-3 px-7 py-9 rounded-xl w-2/4 mr-3">
-                
-                    <!-- image -->
+                <!-- image -->
                 <div class="mr-5 p-3 rounded-3xl">
                         <img src="./assets/board.png" alt="drawing board pic">
                     </div>
                 <!-- Title text -->
                 <div>
-                        <a href="./blog.html"> <button>Discover Something New Today!</button></a>
+                        <a href="#">Discover Something New Today!</a>
     
                     </div>
                 </div>
@@ -217,21 +207,6 @@
             </div>
         </section>
         <!-- Discover Something New Today ENds -->
-
-        <!-- Activity Log Starts Here -->
-        <section class="bg-white rounded-xl w-1/5">
-            <div class="mb-3 text-center">
-                <div class="flex gap-2 my-4 justify-center">
-                    <img src="./assets/activity.png" alt="loading activity">
-                    <span>Activity Log</span>
-                </div>
-                <button id="clear-btn" class="btn btn-active btn-primary" onclick="clearHis()">Clear History</button>
-            </div>
-            <hr class="border-dashed">
-            <div id="activity-box" class="p-4">
-            </div>
-        </section>
-        <!-- Activity Log Ends Here -->
     </main>
     <script src="./activity.js"></script>
 </body>
