@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Board</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body id="body" class="bg-indigo-50 pt-4">
+
+    <!-- Navigation Bar Starts here -->
+    <section class="container mx-auto mb-8">
+        <div class="navbar bg-base-100 rounded-2xl">
+            <div class="flex-1">
+                <img src="./assets/logo.png" class="mr-2">
+                <a class="text-xl">Dev<span class="font-bold">Board</span></a>
+            </div>
+            <div class="flex-none">
+                <div class="flex bg-indigo-50 mr-5 p-3 rounded-3xl">
+                    <div><img src="./assets/checkbox.png" alt="checkbox here"></div>
+                    <p id="nav-count" class="font-bold ml-2"></p>
+                </div>
+                <div class="bg-indigo-50 p-3 rounded-full">
+                    <div class="w-8 rounded-full">
+                        <button onclick="colorChng()"><img alt="this is a theme button"
+                                src="./assets/theme-btn.png" /></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Navigation Bar Ends here -->
+
+    <main class="container mx-auto mb-4 flex gap-5 justify-between">
+
+        <!-- Discover Something New Today starts -->
+        <section class="bg-white py-9 px-6 rounded-xl w-4/5">
+            <!-- flexed container of counting cards -->
+            <div class="flex justify-between">
+                <!-- discover card 1 starts -->
+                <div class="flex bg-indigo-50 mb-3 px-8 py-12 rounded-xl w-1/4 mr-3">
+                    <!-- image -->
+                    <div class="mr-5 p-3 rounded-3xl bg-white">
+                        <img src="./assets/checkbox.png" alt="checkBox pic">
+                    </div>
+                    <!-- count text -->
+                    <div>
+                        <h5>Task Assigned</h5>
+                        <span id="task-count" class="font-bold"></span>
+                    </div>
+                </div>
+                <!-- discover card 1 ends -->
+
+                <!-- discover card 2 starts -->
+                <!-- <div>
+                    <a href="#" >
+                        <div class="flex items-center bg-gradient-to-r from-blue-600 to-blue-50 mb-3 px-7 py-9 rounded-xl mr-3">
+                        <div class="mr-5 p-3 rounded-3xl">
+                            <img src="./assets/board.png" alt="drawing board pic">
+                        </div>
+                        <div>
+                            <a href="#">Discover Something New Today!</a>
+                        </div>
+                    </div>
+                    </a>
+
+                </div> -->
+
+                <div class="flex items-center bg-gradient-to-r from-blue-600 to-blue-50 mb-3 px-7 py-9 rounded-xl w-2/4 mr-3">
+                <!-- image -->
+                <div class="mr-5 p-3 rounded-3xl">
+                        <img src="./assets/board.png" alt="drawing board pic">
+                    </div>
+                <!-- Title text -->
+                <div>
+                        <a href="#">Discover Something New Today!</a>
+    
+                    </div>
+                </div>
+                <!-- discover card 2 ends -->
+
+                <!-- discover card 3 starts -->
+                <div class="flex bg-indigo-50 mb-3 px-8 py-12 rounded-xl w-1/4">
+                    <!-- image -->
+                    <div class="mr-5 p-3 rounded-3xl bg-white">
+                        <img src="./assets/calender.png" alt="calendar pic">
+                    </div>
+                    <!-- Date text -->
+                    <div>
+                        <h5 id="todays-date"></h5>
+                    </div>
+                </div>
+                <!-- discover card 3 ends -->
+
+            </div>
+            <hr class="border-dashed">
+
+            <!-- grid layout of cards -->
+            <div class="p-2 grid gap-3 grid-cols-3 grid-rows-2">
+
+                <!-- task card 1 starts -->
+                <div class="card bg-indigo-50 w-auto shadow-xl">
+                    <div class="card-body">
+                        <h4 class="bg-white rounded-2xl w-28 p-2">Shop Ease</h4>
+                        <h2 id="card1-title" class="card-title">Fix Mobile Button Issue</h2>
+                        <p class="bg-white p-2 rounded-xl">Whether it's unresponsive, stuck, or malfunctioning, our
+                            comprehensive guide will help you resolve these common issues.</p>
+                        <div class="card-actions justify-between align-middle">
+                            <div>
+                                <p class="text-slate-600">Deadline</p>
+                                <h5>21 March 2025</h5>
+                            </div>
+                            <button id="completed-btn1" class="btn btn-primary completed-btn"
+                                onclick="completed1()">Completed</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 1 ends -->
+
+                <!-- task card 2 starts -->
+                <div class="card bg-indigo-50 w-auto shadow-xl">
+                    <div class="card-body">
+                        <h4 class="bg-white rounded-2xl w-28 p-2">Soft Pay</h4>
+                        <h2 id="card2-title" class="card-title">Add Pay Success Modal</h2>
+                        <p class="bg-white p-2 rounded-xl">With step-by-step instructions, you'll be able to diagnose
+                            the problem and find the right solution.</p>
+                        <div class="card-actions justify-between align-middle">
+                            <div>
+                                <p class="text-slate-600">Deadline</p>
+                                <h5>06 March 2025</h5>
+                            </div>
+                            <button id="completed-btn2" class="btn btn-primary completed-btn"
+                                onclick="completed2()">Completed</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 2 ends -->
+                <!-- task card 3 starts -->
+                <div class="card bg-indigo-50 w-auto shadow-xl">
+                    <div class="card-body">
+                        <h4 class="bg-white rounded-2xl w-28 p-2">Meta</h4>
+                        <h2 id="card3-title" class="card-title">Add new reaction🧐</h2>
+                        <p class="bg-white p-2 rounded-xl">Introducing new reactions: Express yourself better with our
+                            latest range of emoji reactions!</p>
+                        <div class="card-actions justify-between align-middle">
+                            <div>
+                                <p class="text-slate-600">Deadline</p>
+                                <h5>31 March 2025</h5>
+                            </div>
+                            <button id="completed-btn3" class="btn btn-primary completed-btn"
+                                onclick="completed3()">Completed</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 3 ends -->
+                <!-- task card 4 starts -->
+                <div class="card bg-indigo-50 w-auto shadow-xl">
+                    <div class="card-body">
+                        <h4 class="bg-white rounded-2xl w-28 p-2">Programming Hero</h4>
+                        <h2 id="card4-title" class="card-title">Fix Video Loading Issue</h2>
+                        <p class="bg-white p-2 rounded-xl">Experiencing delays? Troubleshoot video loading issues and
+                            get back to seamless streaming in no time!</p>
+                        <div class="card-actions justify-between align-middle">
+                            <div>
+                                <p class="text-slate-600">Deadline</p>
+                                <h5>21 August 2024</h5>
+                            </div>
+                            <button id="completed-btn4" class="btn btn-primary"
+                                onclick="completed4()">Completed</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 4 ends -->
+                <!-- task card 5 starts -->
+                <div class="card bg-indigo-50 w-auto shadow-xl">
+                    <div class="card-body">
+                        <h4 class="bg-white rounded-2xl w-28 p-2">Goggle LLC</h4>
+                        <h2 id="card5-title" class="card-title">Integrate AI search</h2>
+                        <p class="bg-white p-2 rounded-xl">Integrating AI in search functionality is essential because
+                            it enhances the accuracy, efficiency, and personalization of search results. AI algorithms
+                            can understand the context and intent behind user queries</p>
+                        <div class="card-actions justify-between align-middle">
+                            <div>
+                                <p class="text-slate-600">Deadline</p>
+                                <h5>01 April 2025</h5>
+                            </div>
+                            <button id="completed-btn5" class="btn btn-primary"
+                                onclick="completed5()">Completed</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 5 ends -->
+                <!-- task card 6 starts -->
+                <div class="card bg-indigo-50 w-auto shadow-xl">
+                    <div class="card-body">
+                        <h4 class="bg-white rounded-2xl w-28 p-2">Polygon tech</h4>
+                        <h2 id="card6-title" class="card-title">Review AMi Probashi Site</h2>
+                        <p class="bg-white p-2 rounded-xl">Making it possible to deliver more relevant and precise
+                            answers. Additionally, AI can continuously learn and improve from user interactions,
+                            ensuring that search results evolve with users' needs and preferences.</p>
+                        <div class="card-actions justify-between align-middle">
+                            <div>
+                                <p class="text-slate-600">Deadline</p>
+                                <h5>05 May 2025</h5>
+                            </div>
+                            <button id="completed-btn6" class="btn btn-primary"
+                                onclick="completed6()">Completed</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 6 ends -->
+
+            </div>
+        </section>
+        <!-- Discover Something New Today ENds -->
+
+        <!-- Activity Log Starts Here -->
+        <section class="bg-white rounded-xl w-1/5">
+            <div class="mb-3 text-center">
+                <div class="flex gap-2 my-4 justify-center">
+                    <img src="./assets/activity.png" alt="loading activity">
+                    <span>Activity Log</span>
+                </div>
+                <button id="clear-btn" class="btn btn-active btn-primary" onclick="clearHis()">Clear History</button>
+            </div>
+            <hr class="border-dashed">
+            <div id="activity-box" class="p-4">
+            </div>
+        </section>
+        <!-- Activity Log Ends Here -->
+    </main>
+    <script src="./activity.js"></script>
+</body>
+
+</html>
